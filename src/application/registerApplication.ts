@@ -6,6 +6,8 @@ import { apps } from './apps'
  * @param app 所注册的应用
  */
 export default function registerApplication(app: Application) {
+    console.log('app registerApplication', app)
+  
     if (typeof app.activeRule === 'string') {
         const path = app.activeRule
         /**

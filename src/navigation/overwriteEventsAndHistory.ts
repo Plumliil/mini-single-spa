@@ -9,8 +9,7 @@ export default function overwriteEventsAndHistory() {
     // 对pushState添加额外的行为
     window.history.pushState = function (state: any, title: string, url: string) {
         const result = originalPushState.call(this, state, title, url)
-        // loadApps()
-        console.log('originalPushState')
+        loadApps()
         return result
     }
     // 对replaceState添加额外的行为

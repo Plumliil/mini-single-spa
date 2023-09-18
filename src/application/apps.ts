@@ -44,9 +44,7 @@ export async function loadApps() {
         ...getAppsWithStatus(AppStatus.BOOTSTRAPPED),
         ...getAppsWithStatus(AppStatus.UNMOUNTED),
     ]
-
     await toMountApp.map(mountApp)
-    console.log('toMountApp.map(mountApp)', toMountApp.map(mountApp))
 }
 /**
  * 这个函数用于获取具有特定状态的应用程序的列表。它被多次调用，
